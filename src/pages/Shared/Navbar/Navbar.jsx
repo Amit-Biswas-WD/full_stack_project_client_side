@@ -36,15 +36,15 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to={`/`}>
-              <div className="flex items-center">
+              <div className="flex items-center font-sans text-yellow-400">
                 <h2 className="text-3xl font-bold uppercase hidden lg:block">
-                  BISTRO BOSS
+                  foodie
                 </h2>
                 <h2 className="text-2xl font-bold uppercase hidden md:block lg:hidden">
-                  BISTRO BOSS
+                  foodie
                 </h2>
                 <h2 className="text-1xl font-bold uppercase block md:hidden">
-                  BISTRO BOSS
+                  foodie
                 </h2>
               </div>
             </Link>
@@ -89,11 +89,10 @@ const Navbar = () => {
       </nav>
 
       {/* Main Content */}
-      <div className="pt-20 px-4">
-        {/* 👇 Your content starts here, safely below the navbar */}
+      {/* <div className="pt-20 px-4">
         <h1 className="text-3xl font-bold">Welcome!</h1>
         <p className="mt-4">Your main content goes here...</p>
-      </div>
+      </div> */}
     </>
   );
 };
