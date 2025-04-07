@@ -15,9 +15,9 @@ import img5 from "../../../../public/menu/slide5.jpg";
 
 const Category = () => {
   return (
-    <div className="my-10 container mx-auto">
+    <div className="my-20 container mx-auto">
       <Swiper
-        slidesPerView={3}
+        slidesPerView={4}
         spaceBetween={30}
         freeMode={true}
         pagination={{
@@ -28,40 +28,40 @@ const Category = () => {
       >
         <SwiperSlide>
           <div className="relative">
-            <img src={img1} alt="Alcohol" className="w-full h-auto" />
-            <h2 className="text-2xl font-semibold absolute top-[88%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
+            <img src={img1} alt="Alcohol" className="w-[80%] h-[80%]" />
+            <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-[150px] -translate-x-1/2 -translate-y-1/2 text-white">
               Salad
             </h2>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative">
-            <img src={img2} alt="Alcohol" className="w-full h-auto" />
-            <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
+            <img src={img2} alt="Alcohol" className="w-[80%] h-[80%]" />
+            <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-[150px] -translate-x-1/2 -translate-y-1/2 text-white">
               dessert
             </h2>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative">
-            <img src={img3} alt="Alcohol" className="w-full h-auto" />
-            <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
+            <img src={img3} alt="Alcohol" className="w-[80%] h-[80%]" />
+            <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-[150px] -translate-x-1/2 -translate-y-1/2 text-white">
               pizza
             </h2>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative">
-            <img src={img4} alt="Alcohol" className="w-full h-auto" />
-            <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
+            <img src={img4} alt="Alcohol" className="w-[80%] h-[80%]" />
+            <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-[150px] -translate-x-1/2 -translate-y-1/2 text-white">
               salad
             </h2>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative">
-            <img src={img5} alt="Alcohol" className="w-full h-auto" />
-            <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
+            <img src={img5} alt="Alcohol" className="w-[80%] h-[80%]" />
+            <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-[150px] -translate-x-1/2 -translate-y-1/2 text-white">
               soup
             </h2>
           </div>
