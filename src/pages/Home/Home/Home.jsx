@@ -3,7 +3,7 @@ import Category from "../Category/Category"
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-white">
       <Banner/>
       <Category/>
     </div>

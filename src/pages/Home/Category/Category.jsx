@@ -12,10 +12,38 @@ import img2 from "../../../../public/menu/slide2.jpg";
 import img3 from "../../../../public/menu/slide3.jpg";
 import img4 from "../../../../public/menu/slide4.jpg";
 import img5 from "../../../../public/menu/slide5.jpg";
+import SectionTitle from "./../../../components/SectionTitle/SectionTitle";
+
+const values = [
+  {
+    image: img1,
+    title: "Salad",
+  },
+  {
+    image: img2,
+    title: "dessert",
+  },
+  {
+    image: img3,
+    title: "pizza",
+  },
+  {
+    image: img4,
+    title: "salad",
+  },
+  {
+    image: img5,
+    title: "soup",
+  },
+];
 
 const Category = () => {
   return (
-    <div className="my-20 container mx-auto">
+    <div className="py-20 container mx-auto">
+      <SectionTitle
+        heading={"ORDER ONLINE"}
+        subHeading={"---From 11:00am to 10:00pm---"}
+      />
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
@@ -26,46 +54,20 @@ const Category = () => {
         modules={[FreeMode, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className="relative">
-            <img src={img1} alt="Alcohol" className="w-[80%] h-[80%]" />
-            <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-[150px] -translate-x-1/2 -translate-y-1/2 text-white">
-              Salad
-            </h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="relative">
-            <img src={img2} alt="Alcohol" className="w-[80%] h-[80%]" />
-            <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-[150px] -translate-x-1/2 -translate-y-1/2 text-white">
-              dessert
-            </h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="relative">
-            <img src={img3} alt="Alcohol" className="w-[80%] h-[80%]" />
-            <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-[150px] -translate-x-1/2 -translate-y-1/2 text-white">
-              pizza
-            </h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="relative">
-            <img src={img4} alt="Alcohol" className="w-[80%] h-[80%]" />
-            <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-[150px] -translate-x-1/2 -translate-y-1/2 text-white">
-              salad
-            </h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="relative">
-            <img src={img5} alt="Alcohol" className="w-[80%] h-[80%]" />
-            <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-[150px] -translate-x-1/2 -translate-y-1/2 text-white">
-              soup
-            </h2>
-          </div>
-        </SwiperSlide>
+        {values.map((value) => (
+          <SwiperSlide>
+            <div className="relative">
+              <img
+                src={value.image}
+                alt="Alcohol"
+                className="w-[80%] h-[80%]"
+              />
+              <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-[120px] -translate-x-1/2 -translate-y-1/2 text-white">
+                {value.title}
+              </h2>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
