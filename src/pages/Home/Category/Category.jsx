@@ -56,13 +56,13 @@ const Category = () => {
       >
         {values.map((value) => (
           <SwiperSlide>
-            <div className="relative">
+            <div className="">
               <img
                 src={value.image}
                 alt="Alcohol"
-                className="w-[80%] h-[80%]"
+                className="w-full h-[80%]"
               />
-              <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-[120px] -translate-x-1/2 -translate-y-1/2 text-white">
+              <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
                 {value.title}
               </h2>
             </div>
