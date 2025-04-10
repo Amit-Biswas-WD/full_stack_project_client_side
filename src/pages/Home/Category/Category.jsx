@@ -42,7 +42,7 @@ const Category = () => {
     <div className="py-20 container mx-auto">
       <SectionTitle
         heading={"ORDER ONLINE"}
-        subHeading={"---From 11:00am to 10:00pm---"}
+        subHeading={"From 11:00am to 10:00pm"}
       />
       <Swiper
         slidesPerView={4}
@@ -60,7 +60,7 @@ const Category = () => {
               <img
                 src={value.image}
                 alt="Alcohol"
-                className="w-full h-[80%]"
+                className="w-full"
               />
               <h2 className="text-2xl font-semibold uppercase absolute top-[88%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
                 {value.title}
