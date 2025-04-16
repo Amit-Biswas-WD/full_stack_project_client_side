@@ -54,8 +54,8 @@ const Category = () => {
         modules={[FreeMode, Pagination]}
         className="mySwiper"
       >
-        {values.map((value) => (
-          <SwiperSlide>
+        {values.map((value, index) => (
+          <SwiperSlide key={index}>
             <div className="">
               <img
                 src={value.image}

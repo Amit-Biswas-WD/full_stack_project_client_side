@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
-    { name: "Home", path: "/" },
+    { name: "Home", patfh: "/" },
     { name: "Contact Us", path: "/contactUs" },
     { name: "Dashboard", path: "/dashboard" },
     { name: "Our Menu", path: "/menu" },
@@ -87,12 +87,6 @@ const Navbar = () => {
           </div>
         )}
       </nav>
-
-      {/* Main Content */}
-      {/* <div className="pt-20 px-4">
-        <h1 className="text-3xl font-bold">Welcome!</h1>
-        <p className="mt-4">Your main content goes here...</p>
-      </div> */}
     </>
   );
 };

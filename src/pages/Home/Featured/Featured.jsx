@@ -11,12 +11,13 @@ const Featured = () => {
         backgroundSize: "cover",
         backgroundPosition: "50%",
         backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed"
       }}
     >
       <div>
         <SectionTitle subHeading={"Check it out"} heading={"FROM OUR MENU"} />
       </div>
-      <div className="md:grid md:grid-cols-2 gap-16 md:px-36 px-16">
+      <div className="md:grid md:grid-cols-2 gap-16 md:px-36 px-16 bg-zinc-500 bg-opacity-40 py-6">
         <div className="md:w-[470px] md:h-[290px]">
           <img className="w-full h-full md:block hidden" src={image} alt="" />
         </div>

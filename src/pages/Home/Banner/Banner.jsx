@@ -18,8 +18,8 @@ const Banner = () => {
   return (
     <div className="mt-16">
       <Carousel showThumbs={false} infiniteLoop autoPlay>
-        {values.map((value) => (
-          <div className="h-[540px] w-full">
+        {values.map((value, index) => (
+          <div key={index} className="h-[540px] w-full">
             <img
               src={value.image}
               alt="Image Not Found"
