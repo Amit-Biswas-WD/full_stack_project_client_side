@@ -1,17 +1,22 @@
-import Banner from "../Banner/Banner"
-import Category from "../Category/Category"
-import Featured from "../Featured/Featured"
-import PopularMenu from "../PopularMenu/PopularMenu"
+import { Helmet } from "react-helmet";
+import Banner from "../Banner/Banner";
+import Category from "../Category/Category";
+import Featured from "../Featured/Featured";
+import PopularMenu from "../PopularMenu/PopularMenu";
 
 const Home = () => {
   return (
     <div className="bg-white">
-      <Banner/>
-      <Category/>
-      <PopularMenu/>
-      <Featured/>
+      <Helmet>
+        <title>bisTro Boss || Home</title>
+        <meta name="description" content="This is the home page" />
+      </Helmet>
+      <Banner />
+      <Category />
+      <PopularMenu />
+      <Featured />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
