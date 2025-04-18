@@ -7,7 +7,7 @@ import img4 from "../../../public/menu2/salad-bg.jpg";
 import img5 from "../../../public/menu2/soup-bg.jpg";
 // import { useEffect, useState } from "react";
 import PopularMenuCopy from "../Home/PopularMenu/PopularMenuCopy";
-import useMenu from "../../hooks/useMenu";
+import FilterCategory from "../Shared/FilterCategory/FilterCategory";
 
 const items = [
   {
@@ -47,12 +47,8 @@ const items = [
 ];
 
 const Menu = () => {
-  const [menu] = useMenu();
-  const popularMenu = menu.filter((item) => item.category === "popular");
-  const pizzaMenu = menu.filter((item) => item.category === "pizza");
-  const saladMenu = menu.filter((item) => item.category === "salad");
-  const dessertMenu = menu.filter((item) => item.category === "dessert");
-  const soupMenu = menu.filter((item) => item.category === "soup");
+  const [popularMenu, pizzaMenu, saladMenu, dessertMenu, soupMenu] =
+    FilterCategory();
 
   const coverItem1 = items[0];
   const coverItem2 = items[1];
