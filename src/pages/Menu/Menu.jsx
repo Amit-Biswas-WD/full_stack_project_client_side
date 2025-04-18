@@ -83,9 +83,13 @@ const Menu = () => {
       />
       <PopularMenuCopy
         items={popularMenu}
-        SubHeading={`Don't miss`}
-        Heading={`TODAY'S OFFER`}
       />
+      <Cover
+        img={coverItem2.img}
+        title={coverItem2.title}
+        description={coverItem2.description}
+      />
+      <PopularMenuCopy items={pizzaMenu} />
     </div>
   );
 };

@@ -1,10 +1,7 @@
-import SectionTitle from "../../../components/SectionTitle/SectionTitle";
-
-const PopularMenuCopy = ({ items, SubHeading, Heading }) => {
+const PopularMenuCopy = ({ items }) => {
 
   return (
-    <div className="text-black bg-white pb-20 container mx-auto px-3">
-      <SectionTitle subHeading={SubHeading} heading={Heading} />
+    <div className="text-black bg-white pb-20 container mx-auto px-3 mt-14">
       <div className="md:grid md:grid-cols-2 gap-10">
         {items.map((item) => (
           <div key={item._id || item.id} className="col-span-1 flex gap-6 mb-6">
