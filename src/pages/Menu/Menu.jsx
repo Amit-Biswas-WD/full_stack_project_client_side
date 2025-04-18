@@ -94,6 +94,12 @@ const Menu = () => {
         description={coverItem3.description}
       />
       <PopularMenuCopy items={saladMenu} />
+      <Cover
+        img={coverItem4.img}
+        title={coverItem4.title}
+        description={coverItem4.description}
+      />
+      <PopularMenuCopy items={dessertMenu} />
     </div>
   );
 };
