@@ -100,6 +100,18 @@ const Menu = () => {
         description={coverItem4.description}
       />
       <PopularMenuCopy items={dessertMenu} />
+      <Cover
+        img={coverItem4.img}
+        title={coverItem4.title}
+        description={coverItem4.description}
+      />
+      <PopularMenuCopy items={dessertMenu} />
+      <Cover
+        img={coverItem5.img}
+        title={coverItem5.title}
+        description={coverItem5.description}
+      />
+      <PopularMenuCopy items={soupMenu} />
     </div>
   );
 };
