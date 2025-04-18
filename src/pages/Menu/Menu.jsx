@@ -81,15 +81,19 @@ const Menu = () => {
         title={coverItem1.title}
         description={coverItem1.description}
       />
-      <PopularMenuCopy
-        items={popularMenu}
-      />
+      <PopularMenuCopy items={popularMenu} />
       <Cover
         img={coverItem2.img}
         title={coverItem2.title}
         description={coverItem2.description}
       />
       <PopularMenuCopy items={pizzaMenu} />
+      <Cover
+        img={coverItem3.img}
+        title={coverItem3.title}
+        description={coverItem3.description}
+      />
+      <PopularMenuCopy items={saladMenu} />
     </div>
   );
 };
