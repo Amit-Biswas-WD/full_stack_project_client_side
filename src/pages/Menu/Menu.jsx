@@ -5,8 +5,9 @@ import img2 from "../../../public/menu2/dessert-bg.jpeg";
 import img3 from "../../../public/menu2/pizza-bg.jpg";
 import img4 from "../../../public/menu2/salad-bg.jpg";
 import img5 from "../../../public/menu2/soup-bg.jpg";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import PopularMenuCopy from "../Home/PopularMenu/PopularMenuCopy";
+import useMenu from "../../hooks/useMenu";
 
 const items = [
   {
@@ -46,11 +47,12 @@ const items = [
 ];
 
 const Menu = () => {
-  const [popularMenu, setPopularMenu] = useState([]);
-  const [pizzaMenu, setPizzaMenu] = useState([]);
-  const [saladMenu, setSaladMenu] = useState([]);
-  const [dessertMenu, setDessertMenu] = useState([]);
-  const [soupMenu, setSoupMenu] = useState([]);
+  const [menu] = useMenu();
+  const popularMenu = menu.filter((item) => item.category === "popular");
+  const pizzaMenu = menu.filter((item) => item.category === "pizza");
+  const saladMenu = menu.filter((item) => item.category === "salad");
+  const dessertMenu = menu.filter((item) => item.category === "dessert");
+  const soupMenu = menu.filter((item) => item.category === "soup");
 
   const coverItem1 = items[0];
   const coverItem2 = items[1];
@@ -58,17 +60,17 @@ const Menu = () => {
   const coverItem4 = items[3];
   const coverItem5 = items[4];
 
-  useEffect(() => {
-    fetch("menu.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setPopularMenu(data.filter((item) => item.category === "popular"));
-        setPizzaMenu(data.filter((item) => item.category === "pizza"));
-        setSaladMenu(data.filter((item) => item.category === "salad"));
-        setDessertMenu(data.filter((item) => item.category === "dessert"));
-        setSoupMenu(data.filter((item) => item.category === "soup"));
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("menu.json")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setPopularMenu(data.filter((item) => item.category === "popular"));
+  //       setPizzaMenu(data.filter((item) => item.category === "pizza"));
+  //       setSaladMenu(data.filter((item) => item.category === "salad"));
+  //       setDessertMenu(data.filter((item) => item.category === "dessert"));
+  //       setSoupMenu(data.filter((item) => item.category === "soup"));
+  //     });
+  // }, []);
 
   return (
     <div className="mt-16">

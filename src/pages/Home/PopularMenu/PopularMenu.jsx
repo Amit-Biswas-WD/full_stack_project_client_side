@@ -1,22 +1,25 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import SectionTitle from "./../../../components/SectionTitle/SectionTitle";
+import useMenu from "../../../hooks/useMenu";
 
 const PopularMenu = () => {
-  const [menu, setMenu] = useState([]);
+  const [menu] = useMenu();
+  const popularMenu = menu.filter((item) => item.category === "popular");
 
-  useEffect(() => {
-    fetch("menu.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const popularMenu = data.filter((item) => item.category === "popular");
-        setMenu(popularMenu);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("menu.json")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       const popularMenu = data.filter((item) => item.category === "popular");
+  //       setMenu(popularMenu);
+  //     });
+  // }, []);
+
   return (
     <div className="text-black pb-20 container mx-auto px-3">
       <SectionTitle subHeading={"Check it out"} heading={"FROM OUR MENU"} />
       <div className="md:grid md:grid-cols-2 gap-10">
-        {menu.map((item, index) => (
+        {popularMenu.map((item, index) => (
           <div key={index} className="col-span-1 flex gap-6">
             <img
               src={item.image}

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import SectionTitle from "./../../../components/SectionTitle/SectionTitle";
 
 const PopularMenuCopy = ({ items, goLink = "/" }) => {
   return (
@@ -7,36 +6,29 @@ const PopularMenuCopy = ({ items, goLink = "/" }) => {
       <div className="md:grid md:grid-cols-2 gap-10">
         {items.slice(0, 8).map((item) => (
           <div key={item._id || item.id} className="col-span-1 flex gap-6 mb-6">
-          {/* Image */}
-          <img
-            src={item.image}
-            alt={item.name}
-            className="w-[60px] h-[60px] bg-[#D9D9D9] rounded-b-full rounded-r-full object-cover"
-          />
-        
-          {/* Content */}
-          <div className="flex-1">
-            {/* Name and Price Row */}
-            <div className="flex justify-between items-center my-2 w-full">
-              {/* Name with dashed line */}
-              <div className="flex-1">
-                <h2 className="text-xl font-semibold text-[#151515] uppercase">
-                  {item.name}
-                </h2>
-                <div className="h-[1px] bg-[#d3d3d3] w-full mt-1"></div>
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-[60px] h-[60px] bg-[#D9D9D9] rounded-b-full rounded-r-full object-cover"
+            />
+
+            <div className="flex-1">
+              <div className="flex justify-between items-center my-2 w-full">
+                <div className="flex-1">
+                  <h2 className="text-xl font-semibold text-[#151515] uppercase">
+                    {item.name}
+                  </h2>
+                  <div className="h-[1px] bg-[#d3d3d3] w-full mt-1"></div>
+                </div>
+
+                <p className="text-xl font-semibold text-[#151515] text-end min-w-[80px] ml-4">
+                  ${item.price}
+                </p>
               </div>
-        
-              {/* Price */}
-              <p className="text-xl font-semibold text-[#151515] text-end min-w-[80px] ml-4">
-                ${item.price}
-              </p>
+
+              <p className="text-[#737373] max-w-[550px]">{item.recipe}</p>
             </div>
-        
-            {/* Description */}
-            <p className="text-[#737373] max-w-[550px]">{item.recipe}</p>
           </div>
-        </div>
-        
         ))}
       </div>
       <div className="text-center">
