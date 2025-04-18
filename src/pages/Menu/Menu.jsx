@@ -43,7 +43,7 @@ const Menu = () => {
   const coverItem = items[0];
 
   return (
-    <div className="mt-20">
+    <div className="mt-16">
       <Helmet>
         <title>bisTro Boss || Menu</title>
         <meta name="description" content="This is the home page" />
