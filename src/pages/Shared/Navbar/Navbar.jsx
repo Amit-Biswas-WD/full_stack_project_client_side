@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { name: "Home", patfh: "/" },
+    { name: "Home", path: "/" },
     { name: "Contact Us", path: "/contactUs" },
     { name: "Dashboard", path: "/dashboard" },
     { name: "Our Menu", path: "/menu" },
@@ -51,15 +52,20 @@ const Navbar = () => {
 
             {/* Desktop links */}
             <div className="hidden md:flex space-x-6">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className="text-white hover:text-green-400 font-normal transition-all duration-300"
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                const isActive = location.pathname === item.path;
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    className={`${
+                      isActive ? "text-green-400" : "text-white"
+                    } hover:text-green-400 font-normal transition-all duration-300`}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
             </div>
 
             {/* Mobile menu icon */}
@@ -74,16 +80,21 @@ const Navbar = () => {
         {/* Mobile menu */}
         {isOpen && (
           <div className="md:hidden px-4 pb-4 bg-gray-700 shadow-md">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
-                className="block py-2 text-white hover:text-blue-600 transition"
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const isActive = location.pathname === item.path;
+              return (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`block py-2 ${
+                    isActive ? "text-green-400" : "text-white"
+                  } hover:text-blue-600 transition`}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
           </div>
         )}
       </nav>

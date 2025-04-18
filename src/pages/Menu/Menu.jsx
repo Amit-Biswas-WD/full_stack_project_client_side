@@ -20,28 +20,28 @@ const items = [
     img: img2,
     title: "DESSERTS",
     description:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Desserts can be defined as a usually sweeter course that concludes a meal. This definition includes a range of courses ranging from fruits or dried nuts to multi-ingredient cakes and pies.",
   },
   {
     id: 3,
     img: img3,
     title: "PIZZA",
     description:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Pizza is a popular Italian dish consisting of a flat bread base topped with various ingredients like tomato sauce, cheese, and other toppings, baked at a high temperature.",
   },
   {
     id: 4,
     img: img4,
     title: "SALADS",
     description:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "What Is Pizza Salad? Pizza salad is what happens when you take all the best pizza toppings and use lettuce (as opposed to crust) as a vehicle to get those toppings from plate to mouth.",
   },
   {
     id: 5,
     img: img5,
     title: "SOUPS",
     description:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "According to food historian Ian Crofton in his book archaeologists in the Middle East found evidence of soup containing hippo bones dating to around 6,000 BCE. ",
   },
 ];
 
@@ -81,37 +81,37 @@ const Menu = () => {
         title={coverItem1.title}
         description={coverItem1.description}
       />
-      <PopularMenuCopy items={popularMenu} />
+      <PopularMenuCopy items={popularMenu} goLink={`/popularMenu`} />
       <Cover
         img={coverItem2.img}
         title={coverItem2.title}
         description={coverItem2.description}
       />
-      <PopularMenuCopy items={pizzaMenu} />
+      <PopularMenuCopy items={pizzaMenu} goLink={`/pizzaMenu`} />
       <Cover
         img={coverItem3.img}
         title={coverItem3.title}
         description={coverItem3.description}
       />
-      <PopularMenuCopy items={saladMenu} />
+      <PopularMenuCopy items={saladMenu} goLink={`/saladMenu`} />
       <Cover
         img={coverItem4.img}
         title={coverItem4.title}
         description={coverItem4.description}
       />
-      <PopularMenuCopy items={dessertMenu} />
+      <PopularMenuCopy items={dessertMenu} goLink={`/dessertMenu`} />
       <Cover
         img={coverItem4.img}
         title={coverItem4.title}
         description={coverItem4.description}
       />
-      <PopularMenuCopy items={dessertMenu} />
+      <PopularMenuCopy items={dessertMenu} goLink={`/dessertMenu`} />
       <Cover
         img={coverItem5.img}
         title={coverItem5.title}
         description={coverItem5.description}
       />
-      <PopularMenuCopy items={soupMenu} />
+      <PopularMenuCopy items={soupMenu} goLink={`/soupMenu`} />
     </div>
   );
 };
