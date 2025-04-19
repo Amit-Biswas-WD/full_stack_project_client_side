@@ -12,7 +12,9 @@ const FoodCard = ({ items }) => {
           </p>
         </div>
         <div className="flex justify-center">
-          <button className="uppercase btn mb-4">add to cart</button>
+          <button className="uppercase btn mb-4 bg-white text-black border border-black hover:text-green-500">
+            add to cart
+          </button>
         </div>
       </div>
     </div>

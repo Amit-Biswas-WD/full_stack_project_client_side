@@ -5,11 +5,12 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { useState } from "react";
 import FoodCard from "../../components/Food/FoodCard";
+import OrderShop from "./OrderShop/OrderShop";
 
 const OurShop = () => {
+  const [tabIndex, setTabIndex] = useState(0);
   const [popularMenu, pizzaMenu, saladMenu, dessertMenu, soupMenu] =
     FilterCategory();
-  const [tabIndex, setTabIndex] = useState(0);
 
   return (
     <div>
@@ -31,39 +32,19 @@ const OurShop = () => {
           </TabList>
 
           <TabPanel>
-            <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-10 my-8">
-              {saladMenu.map((items) => (
-                <FoodCard key={items._id} items={items} />
-              ))}
-            </div>
+            <OrderShop item={saladMenu} />
           </TabPanel>
           <TabPanel>
-            <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-10 my-8">
-              {popularMenu.map((items) => (
-                <FoodCard key={items._id} items={items} />
-              ))}
-            </div>
+            <OrderShop item={popularMenu} />
           </TabPanel>
           <TabPanel>
-            <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-10 my-8">
-              {dessertMenu.map((items) => (
-                <FoodCard key={items._id} items={items} />
-              ))}
-            </div>
+            <OrderShop item={dessertMenu} />
           </TabPanel>
           <TabPanel>
-            <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-10 my-8">
-              {pizzaMenu.map((items) => (
-                <FoodCard key={items._id} items={items} />
-              ))}
-            </div>
+            <OrderShop item={pizzaMenu} />
           </TabPanel>
           <TabPanel>
-            <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-10 my-8">
-              {soupMenu.map((items) => (
-                <FoodCard key={items._id} items={items} />
-              ))}
-            </div>
+            <OrderShop item={soupMenu} />
           </TabPanel>
         </Tabs>
       </div>
