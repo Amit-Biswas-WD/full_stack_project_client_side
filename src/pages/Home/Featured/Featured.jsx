@@ -1,5 +1,4 @@
 import image from "../../../..//public/banner/featured.jpg";
-import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 const Featured = () => {
   return (
@@ -14,10 +13,17 @@ const Featured = () => {
         backgroundAttachment: "fixed"
       }}
     >
-      <div>
-        <SectionTitle subHeading={"Check it out"} heading={"FROM OUR MENU"} />
+      <div className="text-center items-center mb-8">
+      <p className="text-lg font-semibold text-yellow-500">----{" "}{"Check it out"}{" "}----</p>
+      <div className="flex justify-center items-center my-3">
+        <p className="border-t border-white h-2 shadow-2xl w-80 text-center"></p>
       </div>
-      <div className="md:grid md:grid-cols-2 gap-16 md:px-36 px-16 bg-zinc-500 bg-opacity-40 py-6">
+      <h2 className="text-3xl font-semibold text-white">{"FROM OUR MENU"}</h2>
+      <div className="flex justify-center items-center my-3">
+        <p className="border-t border-white h-2 shadow-2xl w-80 text-center"></p>
+      </div>
+    </div>
+      <div className="md:grid md:grid-cols-2 gap-16 md:px-36 px-16 text-white py-6">
         <div className="md:w-[470px] md:h-[290px]">
           <img className="w-full h-full md:block hidden" src={image} alt="" />
         </div>
@@ -29,7 +35,8 @@ const Featured = () => {
             laudantium tempore consequatur consequuntur omnis ullam maxime
             tenetur.
           </p>
-          <button className="my-6 btn border-b-2 border-l-0 border-r-0 border-t-0 bg-none border-white">Read More</button>
+          <button className="uppercase btn btn-outline border-0 border-b-4 my-4 border-b-white text-white hover:border-b-black hover:bg-black hover:text-green-500">
+          Read More</button>
         </div>
       </div>
     </div>

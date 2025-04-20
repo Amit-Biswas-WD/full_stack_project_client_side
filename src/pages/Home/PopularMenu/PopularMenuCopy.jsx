@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const PopularMenuCopy = ({ items, goLink = "/" }) => {
+const PopularMenuCopy = ({ items, title }) => {
   return (
     <div className="text-black bg-white pb-20 container mx-auto px-3 mt-14">
       <div className="md:grid md:grid-cols-2 gap-10">
@@ -32,8 +32,8 @@ const PopularMenuCopy = ({ items, goLink = "/" }) => {
         ))}
       </div>
       <div className="text-center">
-        <Link to={goLink}>
-          <button className="my-6 btn border-b-2 border-l-0 border-r-0 border-t-0 bg-none border-white">
+        <Link to={`/shop/${title}`}>
+          <button className="btn btn-outline border-0 border-b-4 my-4 border-b-black text-black bg-gray-200 hover:bg-black hover:text-green-500">
             ORDER YOUR FAVOURITE FOOD
           </button>
         </Link>

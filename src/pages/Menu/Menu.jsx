@@ -72,44 +72,37 @@ const Menu = () => {
     <div className="mt-16">
       <Helmet>
         <title>bisTro Boss || Menu</title>
-        <meta name="description" content="This is the home page" />
       </Helmet>
       <Cover
         img={coverItem1.img}
         title={coverItem1.title}
         description={coverItem1.description}
       />
-      <PopularMenuCopy items={popularMenu} goLink={`/popularMenu`} />
+      <PopularMenuCopy items={popularMenu} title={"popular"} />
       <Cover
         img={coverItem2.img}
         title={coverItem2.title}
         description={coverItem2.description}
       />
-      <PopularMenuCopy items={pizzaMenu} goLink={`/pizzaMenu`} />
+      <PopularMenuCopy items={pizzaMenu} title={"pizza"} />
       <Cover
         img={coverItem3.img}
         title={coverItem3.title}
         description={coverItem3.description}
       />
-      <PopularMenuCopy items={saladMenu} goLink={`/saladMenu`} />
+      <PopularMenuCopy items={saladMenu} title={"salad"} />
       <Cover
         img={coverItem4.img}
         title={coverItem4.title}
         description={coverItem4.description}
       />
-      <PopularMenuCopy items={dessertMenu} goLink={`/dessertMenu`} />
-      <Cover
-        img={coverItem4.img}
-        title={coverItem4.title}
-        description={coverItem4.description}
-      />
-      <PopularMenuCopy items={dessertMenu} goLink={`/dessertMenu`} />
+      <PopularMenuCopy items={dessertMenu} title={"dessert"} />
       <Cover
         img={coverItem5.img}
         title={coverItem5.title}
         description={coverItem5.description}
       />
-      <PopularMenuCopy items={soupMenu} goLink={`/soupMenu`} />
+      <PopularMenuCopy items={soupMenu} title={"soup"} />
     </div>
   );
 };

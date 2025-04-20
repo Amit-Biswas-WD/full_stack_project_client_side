@@ -9,7 +9,6 @@ const Home = () => {
     <div className="bg-white">
       <Helmet>
         <title>bisTro Boss || Home</title>
-        <meta name="description" content="This is the home page" />
       </Helmet>
       <Banner />
       <Category />

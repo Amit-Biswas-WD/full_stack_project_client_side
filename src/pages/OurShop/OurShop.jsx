@@ -4,16 +4,23 @@ import FilterCategory from "../Shared/FilterCategory/FilterCategory";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { useState } from "react";
-import FoodCard from "../../components/Food/FoodCard";
 import OrderShop from "./OrderShop/OrderShop";
+import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const OurShop = () => {
-  const [tabIndex, setTabIndex] = useState(0);
+  const categories = ["popular", "pizza", "salad", "dessert", "soup"];
+  const { category } = useParams();
+  const initialIndex = categories.indexOf(category);
+  const [tabIndex, setTabIndex] = useState(initialIndex);
   const [popularMenu, pizzaMenu, saladMenu, dessertMenu, soupMenu] =
     FilterCategory();
 
   return (
     <div>
+      <Helmet>
+        <title>bisTro Boss || Our Shop</title>
+      </Helmet>
       <div>
         <Cover
           img={coverImg}
@@ -24,10 +31,10 @@ const OurShop = () => {
       <div className="container mx-auto my-6">
         <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
           <TabList>
-            <Tab>Salad</Tab>
             <Tab>Popular</Tab>
-            <Tab>Dessert</Tab>
             <Tab>Pizza</Tab>
+            <Tab>Salad</Tab>
+            <Tab>Dessert</Tab>
             <Tab>Soup</Tab>
           </TabList>
 

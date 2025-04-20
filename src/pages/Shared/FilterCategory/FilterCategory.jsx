@@ -1,7 +1,8 @@
 import useMenu from "../../../hooks/useMenu";
 
 const FilterCategory = () => {
-  const [menu] = useMenu();
+const [menu] = useMenu();
+
   const popularMenu = menu.filter((item) => item.category === "popular");
   const pizzaMenu = menu.filter((item) => item.category === "pizza");
   const saladMenu = menu.filter((item) => item.category === "salad");
