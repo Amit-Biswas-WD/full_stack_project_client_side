@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaEyeSlash } from "react-icons/fa";
 import { IoIosEye } from "react-icons/io";
 import { Link } from "react-router-dom";
+import authentication1 from "../../../public/authencation/authentication1.png";
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -17,19 +18,19 @@ const SignIn = () => {
     console.log("User Registered:", valueInfo);
   };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
+    <div className="min-h-screen mt-16 flex items-center justify-center bg-gray-100 p-6">
       <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row w-full max-w-4xl">
-        <div className="hidden md:flex md:w-1/2 bg-gray-500 items-center justify-center p-8">
+        <div className="hidden md:flex md:w-1/2 bg-black/25 items-center justify-center p-8">
           <img
-            src="https://i.ibb.co.com/C5tKvrVS/registration.jpg"
-            alt="Registration"
-            className="w-full h-auto object-cover rounded-lg"
+            src={authentication1}
+            alt="Login"
+            className="w-full h-auto object-cove rounded-base"
           />
         </div>
 
         <div className="w-full md:w-1/2 p-8">
           <h2 className="text-2xl font-bold text-center text-gray-700 mb-8">
-            Register
+            SignIn
           </h2>
           <div className="flex justify-center text-center items-center">
             {/* <Google /> */}

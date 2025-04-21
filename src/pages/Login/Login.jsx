@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaEyeSlash } from "react-icons/fa";
 import { IoIosEye } from "react-icons/io";
 import { Link } from "react-router-dom";
+import authentication2 from "../../../public/authencation/authentication2.png"
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -18,10 +19,10 @@ const Login = () => {
   return (
     <div className="min-h-screen mt-16 flex items-center justify-center bg-gray-100 p-6">
       <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row w-full max-w-4xl">
-        <div className="hidden md:flex md:w-1/2 bg-gray-500 items-center justify-center p-8">
+        <div className="hidden md:flex md:w-1/2 bg-black/25 items-center justify-center p-8">
           <img
-            src="https://i.ibb.co.com/Zz6zW6Cq/login.jpg"
-            alt="Registration"
+            src={authentication2}
+            alt="Sign Up"
             className="w-full h-auto object-cover rounded-lg"
           />
         </div>
