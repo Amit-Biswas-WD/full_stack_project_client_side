@@ -13,7 +13,7 @@ const Navbar = () => {
     { name: "Dashboard", path: "/dashboard" },
     { name: "Our Menu", path: "/menu" },
     { name: "Our Shop", path: "/shop/popular" },
-    { name: "Sign Out", path: "/signout" },
+    { name: "Login", path: "/login" },
   ];
 
   // Scroll listener for navbar animation
