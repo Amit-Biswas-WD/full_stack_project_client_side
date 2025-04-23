@@ -30,7 +30,7 @@ const SignIn = () => {
 
         <div className="w-full md:w-1/2 p-8">
           <h2 className="text-2xl font-bold text-center text-gray-700 mb-8">
-            SignIn
+            Sign In
           </h2>
           <div className="flex justify-center text-center items-center">
             {/* <Google /> */}
